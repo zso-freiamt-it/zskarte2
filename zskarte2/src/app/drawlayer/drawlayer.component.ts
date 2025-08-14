@@ -23,8 +23,12 @@ import Modify from 'ol/interaction/Modify';
 import Vector from 'ol/source/Vector';
 import LayerVector from 'ol/layer/Vector';
 import GeoJSON from 'ol/format/GeoJSON';
-import Polygon from 'ol/geom/Polygon';
+import Polygon, {fromCircle} from 'ol/geom/Polygon';
+import Circle from 'ol/geom/Circle';
+import Point from 'ol/geom/Point';
+import GeometryCollection from 'ol/geom/GeometryCollection';
 import Feature from 'ol/Feature';
+import {createBox} from 'ol/interaction/Draw';
 import Draw from 'ol/interaction/Draw';
 import OlMap from 'ol/Map';
 import DrawHole from 'ol-ext/interaction/DrawHole';
@@ -43,6 +47,7 @@ import {EditCoordinatesComponent} from "../edit-coordinates/edit-coordinates.com
 import {DisplayMode} from "../entity/displayMode";
 import Cluster from "ol/source/Cluster";
 import Collection from 'ol/Collection';
+import {HttpClient} from "@angular/common/http";
 
 export const DRAW_LAYER_ZINDEX = 100000
 export const CLUSTER_LAYER_ZINDEX = DRAW_LAYER_ZINDEX + 1;
@@ -121,6 +126,11 @@ export class DrawlayerComponent implements OnInit {
     lastModificationPointCoordinates = null;
     modifiableFeatures: Collection<Feature> = new Collection([]);
 
+
+    private defaultStyle = new Modify({features: this.modifiableFeatures})
+      .getOverlay()
+      .getStyleFunction();
+
     modify = new Modify({
             features: this.modifiableFeatures,
             condition: (event) => {
@@ -130,6 +140,42 @@ export class DrawlayerComponent implements OnInit {
                     this.removeButton.setPosition(event.coordinate);
                 }
                 return true;
+            },
+            style: (feature) => {
+                if(!feature.get('features')) {
+                    return this.defaultStyle(feature);
+                }
+                /* TODO make ellipses work, this code shouldn't be
+                feature.get('features').forEach((modifyFeature) => {
+                    const modifyGeometry = modifyFeature.get('modifyGeometry');
+                    console.log("checking mG");
+                    if (modifyGeometry) {
+                        console.log("we're here");
+                        const modifyPoint = feature.getGeometry().getCoordinates();
+                        const geometries = modifyFeature.getGeometry().getGeometries();
+                        const center = geometries[1].getCoordinates();
+                        const outer = geometries[2].getCoordinates();
+                        let ncenter, nouter;
+                        if (modifyPoint[0] === center[0] && modifyPoint[1] === center[1]) {
+                            // center is being modified
+                            console.log("center mod");
+                            ncenter = center;
+                            nouter = outer;
+                        } else if (modifyPoint[0] === outer[0] &&
+                                   modifyPoint[1] === outer[1]){
+                            // radius is being modified
+                            console.log("outer mod");
+                            ncenter = center;
+                            nouter = outer;
+                        }
+                        const polygon = this.makeEllipsePolygon(ncenter, nouter);
+                        geometries[0].setCoordinates(polygon.getCoordinates());
+                        // save changes to be applied at the end of the interaction
+                        modifyGeometry.setGeometries(geometries);
+                    }
+                });*/
+                return this.defaultStyle(feature);
+
             },
             hitTolerance: 10
         }
@@ -181,7 +227,7 @@ export class DrawlayerComponent implements OnInit {
         this.clearSelection();
     }
 
-    constructor(private sharedState: SharedStateService, private mapStore: MapStoreService, public i18n: I18NService, private sessions: SessionsService, private customImages: CustomImageStoreService, private dialog: MatDialog) {
+    constructor(private http: HttpClient, private sharedState: SharedStateService, private mapStore: MapStoreService, public i18n: I18NService, private sessions: SessionsService, private customImages: CustomImageStoreService, private dialog: MatDialog) {
         this.startAutosave();
     }
 
@@ -270,15 +316,44 @@ export class DrawlayerComponent implements OnInit {
             positioning: CENTER_LEFT,
             offset: [10, 0]
         });
-        this.modify.addEventListener('modifystart', () => {
+        this.modify.addEventListener('modifystart', event => {
             this.toggleRemoveButton(false);
+            /*
+            event.features.forEach(function (feature) {
+                const geometry = feature.getGeometry();
+                if (geometry.getType() === 'GeometryCollection') {
+                    feature.set('modifyGeometry', geometry.clone(), true);
+                }
+            });*/
         });
-        this.modify.addEventListener('modifyend', e => {
+        this.modify.addEventListener('modifyend', event => {
             if (this.isModifyPointInteraction()) {
                 this.lastModificationPointCoordinates = this.modify["vertexFeature_"].getGeometry().getCoordinates();
-                this.removeButton.setPosition(e.mapBrowserEvent.coordinate);
+                this.removeButton.setPosition(event.mapBrowserEvent.coordinate);
                 this.toggleRemoveButton(true);
-            }
+            }/*
+            event.features.forEach(feature => {
+                const modifyGeometry = feature.get('modifyGeometry');
+                if (modifyGeometry) {
+                        const modifyPoint = event.target.vertexFeature_.getGeometry().getCoordinates();
+                        console.log(modifyPoint)
+                        const geometries = modifyGeometry.getGeometries();
+                        const ngeos = feature.getGeometry().getGeometries();
+                        const center = ngeos[1].getCoordinates();
+                        console.log("center", center)
+                        const ocenter = geometries[1].getCoordinates();
+                        let ncenter, nouter;
+                        if (modifyPoint[0] === center[0] && modifyPoint[1] === center[1]) {
+                            // center is being modified
+                            console.log("center mod");
+                            modifyGeometry.translate(center[0] - ocenter[0], center[1] - ocenter[1]);
+                        } else {
+                            // radius is being modified
+                        }
+                    feature.setGeometry(modifyGeometry);
+                    feature.unset('modifyGeometry', true);
+                }
+            });*/
         });
         this.removeButton.getElement().addEventListener('click', e => {
             let coordinationGroup = this.getCoordinationGroupOfLastPoint()
@@ -322,6 +397,7 @@ export class DrawlayerComponent implements OnInit {
             this.selectionChanged();
         })
         this.source.addEventListener('addfeature', e => {
+            this.status = "added feature";
             if (!e.feature.getId()) {
                 e.feature.setId(uuidv4())
             }
@@ -412,11 +488,13 @@ export class DrawlayerComponent implements OnInit {
                     this.load(false).then(() => {
                         this.status = "Map loaded";
                         this.recordChanges = true;
+                        this.loadFixedSigns();
                     });
                 }
             } else {
                 this.currentSessionId = null;
                 this.clearDrawingArea();
+                this.loadFixedSigns();
             }
         })
         // Because of the closure, we end up inside the map -> let's just add an
@@ -432,10 +510,21 @@ export class DrawlayerComponent implements OnInit {
                 }
             }
         );
+        this.loadFixedSigns()
     }
 
     mergeSource: any = null;
 
+    loadFixedSigns() {
+        this.http.get("http://localhost:80/assets/geo/test.geojson").subscribe(data => {
+            this.sharedState.showMapLoader.next(true);
+            console.log("geojson loaded")
+            this.loadElements(data, false).then(() => {
+                console.log("elements loaded")
+                this.sharedState.showMapLoader.next(false);
+            });
+        });
+    }
 
     defineCoordinates() {
         let currentFeature = this.select.getFeatures().getLength() == 1 ? this.select.getFeatures().item(0) : null;
@@ -661,7 +750,7 @@ export class DrawlayerComponent implements OnInit {
                     }
                     if (elements.features) {
                         for (let feature of elements.features) {
-                            let zindex = feature.properties.zindex
+                            let zindex = feature.properties?.zindex
                             if (zindex) {
                                 if (zindex > this.maxZIndex) {
                                     this.maxZIndex = zindex;
@@ -764,6 +853,53 @@ export class DrawlayerComponent implements OnInit {
 
     private drawers: { [key: string]: Draw; } = {}
 
+    makeEllipsePolygon(center, last) {
+        var dx = center[0] - last[0];
+        var dy = center[1] - last[1];
+        var radius = Math.sqrt(dx * dx + dy * dy);
+        var circle = new Circle(center, radius);
+        var polygon = fromCircle(circle, 64);
+        polygon.scale(dx/radius, dy/radius);
+        return polygon;
+    }
+
+    makeDrawer(type) {
+        if (type === "Rectangle") {
+            return new Draw({
+                source: this.source,
+                type: "Circle",
+                geometryFunction: createBox()
+            });
+        }
+        if (type === "Ellipse") {
+            // SO https://stackoverflow.com/a/55441687
+            let ellipse_geofunc = (coordinates, geometry) => {
+              if(!geometry) {
+                  geometry = new GeometryCollection([
+                      new Polygon([]),
+                      new Point(coordinates[0]),
+                      new Point(coordinates[1]),
+                  ]);
+              }
+              const geometries = geometry.getGeometries();
+              const polygon = this.makeEllipsePolygon(coordinates[0], coordinates[1]);
+              geometries[0].setCoordinates(polygon.getCoordinates());
+              geometry.setGeometries(geometries);
+              console.log(geometry);
+              return geometry;
+            }
+            return new Draw({
+                source: this.source,
+                type: "Circle",
+                geometryFunction: ellipse_geofunc
+            });
+        }
+        return new Draw({
+            source: this.source,
+            type: type,
+        });
+    }
+
     startDrawing(sign) {
         //this.select.setActive(false);
         this.currentDrawingSign = sign;
@@ -771,10 +907,7 @@ export class DrawlayerComponent implements OnInit {
             this.toggleFilters([sign.src], false)
             let drawer = this.drawers[sign.type];
             if (!drawer) {
-                drawer = this.drawers[sign.type] = new Draw({
-                    source: this.source,
-                    type: this.currentDrawingSign.type
-                });
+                drawer = this.drawers[sign.type] = this.makeDrawer(sign.type)
                 drawer.drawLayer = this;
                 drawer.addEventListener('drawend', event => {
                     this.endDrawing(event);

@@ -1,0 +1,1056 @@
+{
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    933536.3383216679,
+                    5996837.402496639
+                ],
+                "type": "Point"
+            },
+            "id": "24c6e079-15df-4b1f-83c7-98079d6ddbaa",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "1_Oberwil_-_Lieli_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Oberwil-Lieli 1",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    934096.4669840905,
+                    5992752.0042729825
+                ],
+                "type": "Point"
+            },
+            "id": "4780355a-178c-4989-8c7b-51b15ee5f470",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Oberlunkhofen_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Oberlunkhofen",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    934351.3933467494,
+                    5990793.186626937
+                ],
+                "type": "Point"
+            },
+            "id": "7839c0fa-c4c0-42cc-a584-6cd7832611ba",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Jonen_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Jonen",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    937142.6203907258,
+                    5994336.308476755
+                ],
+                "type": "Point"
+            },
+            "id": "98b7fb77-ec71-4dd2-bbca-ede9ba1da637",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Arni_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Arni",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    939166.0416917003,
+                    5994688.145910476
+                ],
+                "type": "Point"
+            },
+            "id": "877eb752-bcc9-4143-8381-f9afc2b9aa54",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Islisberg_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Islisberg",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    934083.6010452979,
+                    5998074.550282163
+                ],
+                "type": "Point"
+            },
+            "id": "7da1b007-2c1b-4ecf-9ee5-d3522b89991b",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "2_Oberwil_-_Lieli_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Oberwil-Lieli  2",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    933886.0112612671,
+                    6001668.440667809
+                ],
+                "type": "Point"
+            },
+            "id": "daf8fc0e-f882-496b-b2cc-2c32c5ad8cb1",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "2_Rudolfstetten-Friedlisberg_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Rudolfstetten-Friedlisberg 2",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    932808.1072250141,
+                    6002501.5483659115
+                ],
+                "type": "Point"
+            },
+            "id": "ba04df49-7fe4-4105-8160-3389d2ec7a09",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "1_Rudolfstetten-Friedlisberg_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Rudolfstetten-Friedlisberg 1",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    932685.6745651005,
+                    5994681.82127896
+                ],
+                "type": "Point"
+            },
+            "id": "c44db2ce-f55e-4336-893e-870cd8f30eb6",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Unterlunkhofen_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Unterlunkhofen",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    930706.8476408221,
+                    5982695.215215415
+                ],
+                "type": "Point"
+            },
+            "id": "dbc13ca5-c896-4af3-a756-0327aa8a6ef2",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Merenschwand_-_Benzenschwil_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Benzenschwil",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    932511.0258437205,
+                    5984520.440209969
+                ],
+                "type": "Point"
+            },
+            "id": "e58030d9-949f-4864-aabb-da3d35902f88",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Merenschwand_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Merenschwand",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    925055.2016942641,
+                    5986073.6819715025
+                ],
+                "type": "Point"
+            },
+            "id": "9ae3cd9c-8ad9-4b87-97f7-57bb9d775435",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Buttwil_Gemeindehaus_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Buttwil",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    928276.6931124455,
+                    5987007.331289468
+                ],
+                "type": "Point"
+            },
+            "id": "5bfe0b16-2e19-4d4f-a710-1d30db98019c",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Muri_Gemeindehaus_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Muri",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    930840.8875823847,
+                    5989076.838687999
+                ],
+                "type": "Point"
+            },
+            "id": "76151afd-3717-4127-a003-d7fa9cbaf6b4",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Aristau_Gemeindehaus_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Aristau",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    925181.3360754484,
+                    5991554.334675168
+                ],
+                "type": "Point"
+            },
+            "id": "6dec28d1-c951-4959-b567-14983937bfd5",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Boswil_-_Kallern_Sportplatz-Turnhalle_Boswil_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Boswil",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    926694.001886251,
+                    5992975.996243519
+                ],
+                "type": "Point"
+            },
+            "id": "9d2c418f-2b89-43d2-858b-0f452a56163b",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "B\u00fcnzen_Feuerwehrmagazin_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP B\u00fcnzen",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    928719.4930659691,
+                    5993561.6875030575
+                ],
+                "type": "Point"
+            },
+            "id": "6f2d9e89-27bc-420a-a3b2-e53531f88dc0",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Besenb\u00fcren_Schulhaus_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Besenb\u00fcren",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    930953.7705397771,
+                    5993478.701401482
+                ],
+                "type": "Point"
+            },
+            "id": "a7e84000-5ac3-4c54-8fd0-03d480a251cd",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Rottenschwil_Mehrzweckanlage_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Rottenschwil",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    934170.5628817207,
+                    5966243.128696703
+                ],
+                "type": "Point"
+            },
+            "id": "9fc9b131-8a47-495e-bb5b-4b0d7d05c621",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Dietwil_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Dietwil",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    929900.6439042652,
+                    5970779.287439473
+                ],
+                "type": "Point"
+            },
+            "id": "4fcf846f-0ae6-4c5b-a113-2b84943eb1b1",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Abtwil_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Abtwil",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    931331.2192481043,
+                    5976420.957641634
+                ],
+                "type": "Point"
+            },
+            "id": "41e02cce-1530-41bc-97df-a4ae1387e1ae",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Auw_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Auw",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    933725.428444692,
+                    5979778.268516466
+                ],
+                "type": "Point"
+            },
+            "id": "c0ff3531-9ffe-4ddc-975f-0c8f0d714fd7",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "M\u00fchlau_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP M\u00fchlau",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    928555.1803830971,
+                    5979821.2714087125
+                ],
+                "type": "Point"
+            },
+            "id": "4bc8c9c0-fe5f-4f2e-be1e-7ac84fa240fb",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Beinwil_Gemeindehaus_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Beinwil",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    934505.6948016547,
+                    5969438.857361369
+                ],
+                "type": "Point"
+            },
+            "id": "e5f931a0-f6b2-4057-89ea-c4bb9bd9834b",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Oberr\u00fcti_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Oberr\u00fcti",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    934378.1178269951,
+                    5973708.336076669
+                ],
+                "type": "Point"
+            },
+            "id": "57b51d8c-2e99-4194-b26d-39ef6fad6ca2",
+            "properties": {
+                "sig": {
+                    "Xanchor": 0.5,
+                    "Yanchor": 1,
+                    "arrow": "none",
+                    "color": "#FFA500",
+                    "datasheet": "Sins_Objektblatt_Notfalltreffpunkt.pdf",
+                    "de": "NTP",
+                    "drawWithoutCircle": true,
+                    "en": "NTP",
+                    "fillOpacity": 0.2,
+                    "fillStyle": {
+                        "angle": 45,
+                        "name": "filled",
+                        "size": 4,
+                        "spacing": 10
+                    },
+                    "fontSize": 1,
+                    "fr": "NTP",
+                    "iconOffset": 0.1,
+                    "iconSize": 1,
+                    "images": [],
+                    "isFixedSign": true,
+                    "label": "NTP Sins",
+                    "protected": true,
+                    "src": "NTP.png",
+                    "strokeWidth": 1,
+                    "style": "solid",
+                    "type": "Point"
+                }
+            },
+            "type": "Feature"
+        }
+    ],
+    "images": [],
+    "type": "FeatureCollection"
+}

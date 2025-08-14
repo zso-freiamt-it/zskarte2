@@ -92,9 +92,22 @@ export class LayersComponent implements OnInit {
         this.availableFeatures = this.features.filter(f => !f.layer && (!this.layerFilter || f.label.toLowerCase().includes(this.layerFilter.toLowerCase())));
     }
 
-    offlineHost:string = this.findOfflineHost();
+    offlineHost:string = function (t) {
+
+        var x = t.findOfflineHost();
+        console.log("offlineHost: ");
+        console.log(x);
+        return x;
+    }(this);
 
     layers: Layer[] = [
+        {
+            name: "Offline",
+            olLayer: new OlTileLayer({
+                source: new OSM({name: "Offline", url: this.offlineHost+"/styles/osm-bright/{z}/{x}/{y}.png"})
+            }),
+            opacity: 1
+        },
         {
             name: "Open Street Map",
             olLayer: new OlTileLayer({
@@ -132,13 +145,6 @@ export class LayersComponent implements OnInit {
                     'internet/swisstopo/en/home.html">swisstopo</a>'],
                     url: 'https://wmts10.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-grau/default/current/3857/{z}/{x}/{y}.jpeg'
                 })
-            }),
-            opacity: 1
-        },
-        {
-            name: "Offline",
-            olLayer: new OlTileLayer({
-                source: new OSM({name: "Offline", url: this.offlineHost+"/styles/osm-bright/{z}/{x}/{y}.png"})
             }),
             opacity: 1
         }
@@ -184,6 +190,7 @@ export class LayersComponent implements OnInit {
 
     ngOnInit() {
         //By default, we're launching the first layer registered.
+        console.log("Hello")
         this.currentLayer = this.layers[0];
         this.sharedState.switchToLayer(this.layers[0]);
         this.loadFeatures();

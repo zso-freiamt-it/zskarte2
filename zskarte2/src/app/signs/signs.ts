@@ -42,6 +42,17 @@ export class Signs {
             fr: "Place de décontamination"
         },
         {
+            type: "Point",
+            color: "#FFA500",
+            src: "NTP.png",
+            de: "NTP",
+            en: "NTP",
+            fr: "NTP",
+            drawWithoutCircle: true,
+            Xanchor: 0.5,
+            Yanchor: 1
+        },
+        {
             type: "Polygon",
             color: "#0000FF",
             src: "Absperrung Einsatzraum.png",

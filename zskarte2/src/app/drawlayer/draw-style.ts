@@ -454,7 +454,8 @@ export class DrawStyle {
             }
 
             //Draw a circle if it is a geometry with a clear anchor coordinate (e.g. a "point")
-            if (feature.getGeometry().getType() === "Point") {
+            if (feature.getGeometry().getType() === "Point" && 
+                (!signature.drawWithoutCircle || !showIcon)) {
                 iconStyles.push(new Style({
                     image: new Circle({
                         radius: scale * 50,
@@ -479,17 +480,19 @@ export class DrawStyle {
                 }));
 
                 //Draw a circle below the icon
-                iconStyles.push(new Style({
-                    image: new Circle({
-                        radius: iconRadius,
-                        fill: this.getColorFill("#FFFFFF"),
-                        stroke: dashedStroke
-                    }),
-                    geometry: function (feature) {
-                        return new Point(DrawStyle.getIconCoordinates(feature, resolution)[1]);
-                    },
-                    zIndex: zIndex
-                }));
+                if (!signature.drawWithoutCircle) {
+                    iconStyles.push(new Style({
+                        image: new Circle({
+                            radius: iconRadius,
+                            fill: this.getColorFill("#FFFFFF"),
+                            stroke: dashedStroke
+                        }),
+                        geometry: function (feature) {
+                            return new Point(DrawStyle.getIconCoordinates(feature, resolution)[1]);
+                        },
+                        zIndex: zIndex
+                    }));
+                }
 
                 let imageFromMemory;
                 let scaledSize = undefined;
@@ -505,7 +508,7 @@ export class DrawStyle {
                     scaledSize = 492 / naturalDim * scale*signature.iconSize;
                 }
                 let icon = new Icon(({
-                    anchor: [0.5, 0.5],
+                    anchor: [signature.Xanchor ?? 0.5, signature.Yanchor ?? 0.5],
                     anchorXUnits: 'fraction',
                     anchorYUnits: 'fraction',
                     scale: scaledSize ? scaledSize : scale * 2.5 * signature.iconSize,
@@ -631,6 +634,7 @@ export class DrawStyle {
         if (selected) {
             switch (feature.getGeometry().getType()) {
                 case "Polygon":
+                case "GeometryCollection":
                 case "MultiPolygon":
                 case "LineString":
                     return new Style({
@@ -648,6 +652,16 @@ export class DrawStyle {
         if (selected) {
             let coordinatesFunction = null;
             switch (feature.getGeometry().getType()) {
+                case "GeometryCollection":
+                    coordinatesFunction = function (feature) {
+                        let coordinates = [];
+                        for (let c of feature.getGeometry().getGeometries()[0]
+                             .getCoordinates()) {
+                            c.forEach(coord => coordinates.push(coord));
+                        }
+                        return coordinates;
+                    }
+                    break;
                 case "Polygon":
                 case "MultiPolygon":
                     coordinatesFunction = function (feature) {

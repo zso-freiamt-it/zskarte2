@@ -94,6 +94,18 @@ export class DrawingtoolsComponent implements OnInit {
                 src: null
             });
     }
+    rectangle(): void {
+            this.sharedState.selectSign({
+                type: "Rectangle",
+                src: null
+            });
+    }
+    ellipse(): void {
+            this.sharedState.selectSign({
+                type: "Ellipse",
+                src: null
+            });
+    }
 
     line(): void {
         this.sharedState.selectSign({

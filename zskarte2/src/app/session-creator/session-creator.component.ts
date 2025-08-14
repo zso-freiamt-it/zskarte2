@@ -29,6 +29,7 @@ import {PreferencesService} from "../preferences.service";
 import {SessionsService} from "../sessions.service";
 import {MapStoreService} from "../map-store.service";
 import {ConfirmationDialogComponent} from "../confirmation-dialog/confirmation-dialog.component";
+import {DatePipe} from '@angular/common';
 
 @Component({
     selector: 'app-session-creator',
@@ -51,11 +52,16 @@ export class SessionCreatorComponent implements OnInit {
         if (!this.session) {
             let defaultZSO = preferences.getZSO();
             this.session = {
-                title: null,
+                title: "Neue Karte " + 
+                    (new DatePipe('en-US').transform(new Date(), 'dd-MM-yyyy')),
                 uuid: uuidv4(),
-                zsoId: defaultZSO ? defaultZSO.id : null
+                zsoId: defaultZSO ? defaultZSO.id : "zso_fr"
             }
             this.editMode = false;
+        }
+        if(data.instant_quit) {
+            this.submit()
+            dialogRef.close()
         }
     }
 

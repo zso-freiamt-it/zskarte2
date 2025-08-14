@@ -23,6 +23,7 @@ import {BehaviorSubject} from "rxjs";
 import {PreferencesService} from "./preferences.service";
 import {Sign} from "./entity/sign";
 
+//export const LOCALES: string[] = ["de"];
 export const LOCALES: string[] = ["de", "fr", "en"];
 export const DEFAULT_LOCALE: string = LOCALES[0];
 
@@ -187,6 +188,16 @@ export class I18NService {
             de: "Polygon",
             en: "Polygon",
             fr: "Polygone"
+        },
+        rectangle: {
+            de: "Rechteck",
+            en: "Rectangle",
+            fr: "Not-Implemented"
+        },
+        ellipse: {
+            de: "Ellipse",
+            en: "Ellipse",
+            fr: "Not-Implemented"
         },
         point: {
           de: "Punkt",

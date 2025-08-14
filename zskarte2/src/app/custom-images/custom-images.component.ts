@@ -85,11 +85,12 @@ export class CustomImagesComponent implements OnInit {
         let ih = this.imgEl.nativeElement.naturalHeight;
         let vertical = ih > iw;
         if(vertical){
-            canvas.height = ih<MAX_SIZE_OF_ORIGINAL_IMAGE ? ih : MAX_SIZE_OF_ORIGINAL_IMAGE;
+            canvas.height = ih < MAX_SIZE_OF_ORIGINAL_IMAGE ? ih : MAX_SIZE_OF_ORIGINAL_IMAGE;
+
             canvas.width = iw/ih*canvas.height;
         }
         else{
-            canvas.width = iw<MAX_SIZE_OF_ORIGINAL_IMAGE ? iw : MAX_SIZE_OF_ORIGINAL_IMAGE;
+            canvas.width = iw < MAX_SIZE_OF_ORIGINAL_IMAGE ? iw : MAX_SIZE_OF_ORIGINAL_IMAGE;
             canvas.height = ih/iw*canvas.width;
         }
         let ctx = canvas.getContext("2d");

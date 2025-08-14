@@ -53,4 +53,13 @@ export const FRIBOURG: ZSO = {
     defaultLocale: "fr"
 };
 
-export const LIST_OF_ZSO: ZSO[] = [BERN_PLUS, FRIBOURG]
+export const FREIAMT: ZSO = {
+    id: "zso_fr",
+    name: "ZSO Freiamt",
+    initialViewPort: {coordinates: [925545.9577610756,5991085.791598382], zoomLevel: 14},
+    url: "https://www.zso-freiamt.ch/",
+    defaultLocale: "de"
+};
+
+
+export const LIST_OF_ZSO: ZSO[] = [FREIAMT, BERN_PLUS, FRIBOURG]

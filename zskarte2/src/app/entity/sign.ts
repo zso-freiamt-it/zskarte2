@@ -31,6 +31,8 @@ export interface Sign {
     type: string;
     src: string;
     protected?: boolean;
+    isFixedSign?: boolean;
+    drawWithoutCircle?: boolean;
     de?: string;
     fr?: string;
     en?: string;
@@ -52,6 +54,8 @@ export interface Sign {
     arrow?:string;
     iconSize?:number;
     images?:string[];
+    Xanchor?: number;
+    Yanchor?: number;
     kat?: string; //deprecated - kept for compatibility reasons (is translated directly to color)
 }
 
@@ -79,6 +83,8 @@ export function getFirstCoordinate(feature){
             return feature.getGeometry().getCoordinates()[0];
         case "Point":
             return feature.getGeometry().getCoordinates();
+        case "GeometryCollection":
+            return feature.getGeometry().getGeometries()[0].getCoordinates()[0][0];
     }
 
 

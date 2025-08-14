@@ -90,6 +90,9 @@ export class SelectedFeatureComponent implements OnInit {
     constructor(public dialog: MatDialog, private sharedState: SharedStateService, public i18n: I18NService) {
         this.sharedState.currentFeature.subscribe(feature => {
 
+            this.selectedSignature = feature ? feature.get('sig') : null;
+            this.updateFixedRelatedFields();
+
             if (feature && feature.get("features")) {
                 if (feature.get("features").length === 1) {
                     this.groupedFeatures = null;
@@ -106,12 +109,18 @@ export class SelectedFeatureComponent implements OnInit {
         this.sharedState.mergeMode.subscribe(m => {
             this.mergeMode = m;
         });
-        this.sharedState.displayMode.subscribe(displayMode => this.editMode = displayMode !== DisplayMode.HISTORY)
+        this.sharedState.displayMode.subscribe(displayMode => {
+            this.editMode = displayMode !== DisplayMode.HISTORY;
+            this.updateFixedRelatedFields();
+        });
         this.editMode = this.sharedState.displayMode.getValue() !== DisplayMode.HISTORY;
+        this.updateFixedRelatedFields();
     }
 
     groupedFeatures = null;
     editMode: boolean;
+    isDeletable: boolean;
+    canEditSymbol: boolean;
     selectedFeature: any = null;
     selectedSignature: Sign = null;
     rotationPercent: number = 0;
@@ -138,6 +147,13 @@ export class SelectedFeatureComponent implements OnInit {
             group.features.push(f)
         });
         return result
+    }
+    private isSelectedFixed(): boolean {
+        return this.selectedSignature && this.selectedSignature.isFixedSign;
+    }
+    private updateFixedRelatedFields(): void {
+        this.isDeletable = !this.isSelectedFixed();
+        this.canEditSymbol = !this.isSelectedFixed();
     }
 
     private showFeature(feature) {

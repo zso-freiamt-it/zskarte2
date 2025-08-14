@@ -113,7 +113,7 @@ export class ToolbarComponent implements OnInit {
             }
             this.filterKeys = Object.keys(symbols);
             // @ts-ignore
-            this.filterSymbols = Object.values(symbols).sort((a, b) => a.label.localeCompare(b.label));
+            this.filterSymbols = Object.values(symbols).sort((a, b) => String(a.label).localeCompare(b.label) );
         }
     }
 
@@ -147,17 +147,23 @@ export class ToolbarComponent implements OnInit {
 
     private createInitialSession() {
         this.dialog.open(SessionCreatorComponent, {
+            data: {
+                session: this.session,
+                edit: false,
+                instant_quit: true
+            },
             disableClose: true,
             width: '80vw',
             maxWidth: '80vw'
-        })
+        });
     }
 
     createOrLoadSession() {
         this.dialog.open(SessionCreatorComponent, {
             data: {
                 session: this.session,
-                edit: false
+                edit: false,
+                instant_quit: false
             },
             width: '80vw',
             maxWidth: '80vw'
@@ -169,11 +175,12 @@ export class ToolbarComponent implements OnInit {
         this.dialog.open(SessionCreatorComponent, {
             data: {
                 session: this.session,
-                edit: true
+                edit: true,
+                instant_quit: false
             },
             width: '80vw',
             maxWidth: '80vw'
-        })
+        });
     }
 
     deleteSession(): void {

@@ -33,7 +33,8 @@ export class GeocoderComponent implements OnInit {
 
     @ViewChild('searchField', {static: false}) el: ElementRef;
     @Input() drawLayer: DrawlayerComponent;
-    geocoderUrl = 'https://api3.geo.admin.ch/rest/services/api/SearchServer?type=locations&searchText='
+    // geocoderUrl = 'https://api3.geo.admin.ch/rest/services/api/SearchServer?type=locations&searchText='
+    geocoderUrl = 'http://localhost:8000/search/?type=locations&searchText='
     foundLocations = []
     inputText: string = undefined;
     selected = null;
@@ -74,6 +75,9 @@ export class GeocoderComponent implements OnInit {
 
     private mapFeatureForSearch(f) {
         let sig = f.get('sig');
+        if (!sig) {
+          return {}
+        }
         let sign = this.i18n.getLabelForSign(sig)
         let label = ""
         if (sign) {
